@@ -29,6 +29,7 @@
         <button class="category__btn" title="RunGame 영상/설명" data-filter="run">Run Game</button>
         <button class="category__btn" title="QuarterView 영상/설명" data-filter="quarter">QuarterView Game</button>
         <button class="category__btn" title="Adventure 영상/설명" data-filter="adventure">Adventure Game</button>
+        <button class="category__btn" title="FPS_Game 영상/설명" data-filter="fps">FPS Game</button>
       </div>
       <div class="icons">
         <button><i class="fas fa-dice-three"></i></button>
@@ -92,7 +93,7 @@
           <!-- Metadata -->
             <div class="title">
               <span class="titleclamp">
-                Unity Project[Solo] - PC : 유니티 엔진을 이용해 QuarterView방식의
+                Unity Project[Single] - PC : 유니티 엔진을 이용해 QuarterView방식의
                 Game을 제작했습니다.
               </span>
             </div>
@@ -165,6 +166,50 @@
           </div>
         </section>
     </div>
+
+    <div class="Game" data-type="fps">
+      <div class="primary">
+        <!-- Video Player -->
+        <section class="player">
+          <video
+            class="video__player"
+            controls
+            src="media/FPS_Test.mp4"
+          ></video>
+        </section>
+  
+          <section class="info">
+            <!-- Metadata -->
+              <div class="title">
+                <span class="titleclamp">
+                  Unreal Project[Single] - PC : Unreal을 이용해 레벨에 생성되는 과녁을
+                  공격하고 그에 따른 보상을 획득하는 Game을 제작했습니다.
+                </span>
+              </div>
+            <div class="infoAndicons">
+              <span class="views">1 days ago</span>
+            </div>
+            <div class="detail">
+                  <span class="details">
+                      게임 요약<br>
+                      <br>
+                      Unreal을 학습하며 간단한 FPS형태의 게임을 제작했습니다.<br>
+                      &emsp; - 화면 상단에 왼쪽부터 "점수", "플레이어 HP", "제한 시간"이 출력됩니다.<br>
+                      &emsp; - 마우스 왼클릭으로 총을 발사할 수 있습니다.<br>
+                      &emsp; - 맵에 특정 구간에 도달 시 과녁이 나타납니다.<br>
+                      &emsp; - 과녁의 종류에는,<br>
+                      &emsp;&emsp;&emsp; 1. 점수 획득(과녁에 입력된 숫자에 따라 점수 획득)<br>
+                      &emsp;&emsp;&emsp; 2. 플레이어 이동 속도 증가<br>
+                      &emsp;&emsp;&emsp; 3. 추가 시간 이 있습니다.<br>
+                      &emsp; - 초록색 큐브를 획득할 경우 자동으로 플레이어 HP를 회복합니다.<br>
+                      &emsp; - "강(River)과 맞닿음", "타임 아웃", "HP 0"가 될 경우 게임 아웃.<br>
+                      &emsp; - 맵 끝에 도달할 경우 게임이 끝납니다.<br>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+      </div>
   </div>
   </body>
 </html>
