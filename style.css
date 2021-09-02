@@ -98,14 +98,53 @@ header .category {
 }
 
 header .category .category__btn {
+  position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   background-color: bisque;
   border-radius: 5px;
 }
-
+/* 
 header .category .category__btn:hover {
   background-color: burlywood;
+} */
+
+.projects__description {
+  position: absolute;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 200ms ease-in;
+}
+
+.category__btn:hover .projects__description {
+  opacity: 0.9;
+  transform: translateX(0px);
+}
+
+.projects__description span {
+  color: white;
+}
+
+.projects__description span::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 50px;
+  /* height: 2px; */
+  /* transform: translateX(-50%); */
+  /* margin-top: 8px; */
+  background-color: var(--color-dark-white);
 }
 
 header .input__search .search__box .key {
