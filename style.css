@@ -44,7 +44,7 @@ button:focus {
   border: none;
   cursor: pointer;
   outline: none;
-  background: transparent;
+  /* background: transparent; */
 }
 
 .invisible {
@@ -75,6 +75,7 @@ header .logo {
 header .logo .title {
   font-size: var(--font-large);
   color: var(--white-color);
+  background: transparent;
 }
 
 header .logo .fa-play-circle {
@@ -90,19 +91,19 @@ header .logo .fa-bars {
   padding: 12px;
 }
 
-header .category {
+.category {
   display: flex;
   justify-content: space-between;
-  width: 40%;
   background-color: var(--black-color);
 }
 
-header .category .category__btn {
+.category__btn {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin: 10px;
   background-color: bisque;
   border-radius: 5px;
 }
@@ -153,26 +154,6 @@ header .input__search .search__box .key {
   height: 30px;
 }
 
-header .input__search .search {
-  font-size: 14px;
-  border: 1px solid var(--grey-light-color);
-  width: 70px;
-  height: 33px;
-  background-color: var(--grey-light-color);
-}
-
-header .input__search .mic {
-  font-size: 20px;
-  width: 5%;
-  height: 33px;
-  padding-left: 12px;
-}
-
-header .input__search input {
-  width: 90%;
-  border: none;
-}
-
 header .icons {
   display: flex;
   align-items: center;
@@ -185,12 +166,23 @@ header .icons i {
 
 header .icons button {
   padding: 8px;
+  background: transparent;
 }
 
 header .icons img {
   width: var(--avatar-size);
   height: var(--avatar-size);
   border-radius: 50%;
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  top: 15px;
+  right: 32px;
+  font-size: 30px;
+  color: white;
+  display: none;
+  background: transparent;
 }
 
 .primary {
@@ -269,12 +261,43 @@ header .icons img {
   color: var(--white-color);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .infoAndUpNext {
     flex-direction: row;
   }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--color-dark-blue);
+    background: black;
+  }
 
-  .upNext {
-    padding: var(--spacing);
+  .title {
+    padding-top: 14px;
+  }
+
+  .navbar__toggle-btn {
+    display: block;
+    top: 14px;
+    right: 16px;
+    font-size: 24px;
+  }
+  .category {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+    padding: 20px 20px 10px 20px;
+  }
+
+  .category.open {
+    display: block;
+  }
+
+  .category__btn {
+    width: 100%;
+  }
+  .icons i {
+    display: none;
   }
 }

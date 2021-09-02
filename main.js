@@ -7,7 +7,14 @@ function refreshPage() {
   window.location.reload();
 }
 
+//navbar toggle 버튼
 const btnContainer = document.querySelector(".category");
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  btnContainer.classList.toggle("open");
+  console.log("누름");
+});
+
 const projects = document.querySelectorAll(".Game");
 btnContainer.addEventListener("click", (e) => {
   const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
